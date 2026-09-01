@@ -38,5 +38,258 @@
       </div>
     </div>
   </nav>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bus Schedule | EasyRide</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .schedule-header {
+            background: linear-gradient(135deg, #0d6efd, #084298);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .schedule-header h1 {
+            font-weight: 700;
+        }
+
+        .schedule-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .table thead {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .table th,
+        .table td {
+            padding: 18px;
+            vertical-align: middle;
+        }
+
+        .route {
+            font-weight: 600;
+        }
+
+        .time {
+            font-weight: 600;
+            color: #0d6efd;
+        }
+
+        .status {
+            color: green;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <section class="schedule-header">
+        <h1>Bus Schedule</h1>
+        <p class="mb-0">
+            Check bus routes, departure times and arrival times
+        </p>
+    </section>
+
+
+    <!-- Search -->
+    <div class="container mt-5">
+
+        <div class="card p-4 mb-4 border-0 shadow-sm">
+
+            <div class="row g-3">
+
+                <div class="col-md-4">
+                    <label class="form-label">From</label>
+                    <select class="form-select" id="fromLocation">
+                        <option value="">Select Location</option>
+                        <option>Colombo</option>
+                        <option>Kandy</option>
+                        <option>Galle</option>
+                        <option>Matara</option>
+                        <option>Negombo</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">To</label>
+                    <select class="form-select" id="toLocation">
+                        <option value="">Select Location</option>
+                        <option>Colombo</option>
+                        <option>Kandy</option>
+                        <option>Galle</option>
+                        <option>Matara</option>
+                        <option>Negombo</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Travel Date</label>
+                    <input type="date" class="form-control" id="travelDate">
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary px-5" onclick="searchBus()">
+                        Search Buses
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Schedule Table -->
+        <div class="card schedule-card mb-5">
+
+            <div class="card-body p-0">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover mb-0">
+
+                        <thead>
+                            <tr>
+                                <th>Bus</th>
+                                <th>Route</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="scheduleTable">
+
+                            <tr>
+                                <td>
+                                    <strong>EasyRide 01</strong>
+                                </td>
+
+                                <td class="route">
+                                    Colombo → Kandy
+                                </td>
+
+                                <td class="time">
+                                    06:30 AM
+                                </td>
+
+                                <td>
+                                    10:00 AM
+                                </td>
+
+                                <td class="status">
+                                    Available
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-primary btn-sm"
+                                        onclick="bookBus('EasyRide 01')">
+                                        Book Now
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <strong>EasyRide 02</strong>
+                                </td>
+
+                                <td class="route">
+                                    Colombo → Galle
+                                </td>
+
+                                <td class="time">
+                                    08:00 AM
+                                </td>
+
+                                <td>
+                                    11:00 AM
+                                </td>
+
+                                <td class="status">
+                                    Available
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-primary btn-sm"
+                                        onclick="bookBus('EasyRide 02')">
+                                        Book Now
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <strong>EasyRide 03</strong>
+                                </td>
+
+                                <td class="route">
+                                    Kandy → Colombo
+                                </td>
+
+                                <td class="time">
+                                    09:30 AM
+                                </td>
+
+                                <td>
+                                    01:00 PM
+                                </td>
+
+                                <td class="status">
+                                    Available
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-primary btn-sm"
+                                        onclick="bookBus('EasyRide 03')">
+                                        Book Now
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
 </body>
 </html>
