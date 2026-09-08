@@ -1,126 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>EasyRide | Admin Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-info-subtle shadow-sm">
-  <div class="container-fluid px-4">
 
-    <!-- Responsive Logo -->
-    <a class="navbar-brand" href="/index.html">
-      <img src="images/3632041d-dc7c-483f-9192-61d8eb8220d0.png"
-           alt="EasyRide Logo"
-           class="img-fluid w-100"
-           style="max-width: 200px;">
-    </a>
+<body class="bg-light">
 
-    <!-- Mobile Menu Button -->
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-4">
 
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navigation Links -->
-    <div class="collapse navbar-collapse justify-content-end"
-         id="navbarNav">
-
-      <ul class="navbar-nav align-items-lg-center gap-lg-3">
-
-        <li class="nav-item">
-          <a class="nav-link active text-dark fw-medium fs-5 px-3"
-             href="/index.html">
-            Home
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-medium fs-5 px-3"
-             href="/service.html">
-            Our Services
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-medium fs-5 px-3"
-             href="/booking.html">
-            Bus Schedule
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-medium fs-5 px-3"
-             href="/contact.html">
-            Contact Us
-          </a>
-        </li>
-
-        <li>
-            <a class="btn btn-primary fw-semibold fs-5 px-4"
-                 href="login.html">
-                Login
+            <!-- Logo -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="images/3632041d-dc7c-483f-9192-61d8eb8220d0.png"
+                    alt="EasyRide Logo"
+                    class="img-fluid"
+                    style="max-width: 180px;">
             </a>
-        </li>
 
-      </ul>
+            <!-- Mobile Button -->
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
 
-    </div>
-  </div>
-</nav>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<body>
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-end"
+                id="navbarNav">
 
-   
+                <ul class="navbar-nav align-items-lg-center gap-lg-2">
 
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h1>Welcome, Admin</h1>
-            <p>Manage your EasyRide bus booking system.</p>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3"
+                            href="/index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3"
+                            href="/service.html">
+                            Our Services
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3"
+                            href="/booking.html">
+                            Bus Schedule
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3"
+                            href="/contact.html">
+                            Contact Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary rounded-pill px-4 fw-semibold"
+                            href="login.html">
+                            Login
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
         </div>
-    </section>
+    </nav>
 
 
-    
-    <section class="py-5">
+    <!-- ================= ADMIN HEADER ================= -->
+    <section class="bg-primary text-white py-5">
         <div class="container">
 
-            <div class="row g-4">
+            <div class="row align-items-center">
 
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5>Total Buses</h5>
-                            <h2>25</h2>
-                        </div>
-                    </div>
+                <div class="col-md-8">
+
+                    <span class="badge bg-white text-primary rounded-pill px-3 py-2 mb-3">
+                        ADMIN DASHBOARD
+                    </span>
+
+                    <h1 class="fw-bold display-5">
+                        Welcome, Admin 👋
+                    </h1>
+
+                    <p class="lead mb-0">
+                        Manage your EasyRide bus booking system easily.
+                    </p>
+
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5>Total Bookings</h5>
-                            <h2>150</h2>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-md-4 text-md-end mt-4 mt-md-0">
 
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5>Total Customers</h5>
-                            <h2>500</h2>
-                        </div>
+                    <div class="bg-white bg-opacity-10
+                                rounded-4 p-4">
+
+                        <h6 class="mb-1">
+                            System Status
+                        </h6>
+
+                        <span class="badge bg-success rounded-pill">
+                            ● Online
+                        </span>
+
                     </div>
+
                 </div>
 
             </div>
@@ -128,35 +126,299 @@
         </div>
     </section>
 
-    <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="">All Users</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Bus Vendors</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Bus Locations</a>
-  </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Bookings</a>
-</ul>
+
+    <!-- ================= STATISTICS ================= -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Total Buses -->
+                <div class="col-sm-6 col-lg-4">
+
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+
+                                    <p class="text-muted mb-2">
+                                        Total Buses
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        25
+                                    </h2>
+
+                                </div>
+
+                                <div class="bg-primary-subtle
+                                            text-primary
+                                            rounded-circle
+                                            p-3 fs-4">
+                                    🚌
+                                </div>
+
+                            </div>
+
+                            <div class="mt-3">
+                                <span class="text-success fw-semibold">
+                                    ↑ 8%
+                                </span>
+
+                                <small class="text-muted">
+                                    from last month
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
+                <!-- Total Bookings -->
+                <div class="col-sm-6 col-lg-4">
+
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+
+                                    <p class="text-muted mb-2">
+                                        Total Bookings
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        150
+                                    </h2>
+
+                                </div>
+
+                                <div class="bg-success-subtle
+                                            text-success
+                                            rounded-circle
+                                            p-3 fs-4">
+                                    🎫
+                                </div>
+
+                            </div>
+
+                            <div class="mt-3">
+                                <span class="text-success fw-semibold">
+                                    ↑ 12%
+                                </span>
+
+                                <small class="text-muted">
+                                    from last month
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
+                <!-- Total Customers -->
+                <div class="col-sm-6 col-lg-4">
 
-    <footer class="bg-dark text-white text-center py-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
 
-        <p class="mb-0">
-            © 2026 EasyRide. All Rights Reserved.
-        </p>
+                        <div class="card-body p-4">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+
+                                    <p class="text-muted mb-2">
+                                        Total Customers
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        500
+                                    </h2>
+
+                                </div>
+
+                                <div class="bg-warning-subtle
+                                            text-warning
+                                            rounded-circle
+                                            p-3 fs-4">
+                                    👥
+                                </div>
+
+                            </div>
+
+                            <div class="mt-3">
+                                <span class="text-success fw-semibold">
+                                    ↑ 15%
+                                </span>
+
+                                <small class="text-muted">
+                                    from last month
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MANAGEMENT TABS ================= -->
+    <section class="pb-3">
+
+        <div class="container">
+
+            <div class="card border-0 shadow-sm rounded-4">
+
+                <div class="card-body p-2">
+
+                    <ul class="nav nav-pills nav-fill">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link active rounded-3 fw-semibold"
+                                href="">
+                                👥 All Users
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link rounded-3 fw-semibold"
+                                href="vendors.html">
+                                🚌 Bus Vendors
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link rounded-3 fw-semibold"
+                                href="locations.html">
+                                📍 Bus Locations
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link rounded-3 fw-semibold"
+                                href="bookings.html">
+                                🎫 Bookings
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= USERS HEADER ================= -->
+    <section class="py-4">
+
+        <div class="container">
+
+            <div class="card border-0 shadow-sm rounded-4">
+
+                <div class="card-body p-4">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-8">
+
+                            <h2 class="fw-bold mb-2">
+                                All Users
+                            </h2>
+
+                            <p class="text-muted mb-0">
+                                View and manage all registered users
+                                in the EasyRide system.
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+                            <button class="btn btn-primary rounded-pill px-4">
+                                + Add User
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= USERS ================= -->
+    <section class="pb-5">
+
+        <div class="container">
+
+            <div class="row g-4" id="Users">
+
+                <!-- Users will load from admin.js -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-white border-top py-4">
+
+        <div class="container text-center">
+
+            <p class="text-muted mb-0">
+                © 2026 EasyRide. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 
-</body>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="/admin.js"></script>
+
 </body>
 
 </html>
-</body>
-</html>
+
