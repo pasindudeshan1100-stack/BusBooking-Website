@@ -154,9 +154,14 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetBusVendors", requestOpti
 
         <div class="card-footer bg-white border-0 p-4 pt-0">
 
-            <button class="btn btn-dark w-100 rounded-pill fw-semibold">
-                View Vendor
-            </button>
+           <button class="btn btn-info text-white fw-semibold"
+                    type="button" onclick="updateVendor(${result[i].vendorId})">
+                   Update
+                </button>
+            <button class="btn btn-info text-white fw-semibold " onclick="deleteVendor(${result[i].vendorId})"
+                    type="submit" >
+                    Delete
+                </button>
 
         </div>
 
@@ -244,11 +249,11 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetAllUsers", requestOption
                             <div>
 
                                 <small class="text-uppercase text-secondary fw-semibold">
-                                    Contact No
+                                    password
                                 </small>
 
                                 <h6 class="fw-bold mt-1">
-                                    ${result.data[i].phoneNumber}
+                                    ${result.data[i].password}
                                 </h6>
 
                             </div>
