@@ -68,6 +68,39 @@
             Welcome to the Bus Locations page!
         </p>
     </section>
+            <nav class="navbar navbar-expand-lg bg-info-subtle shadow-sm py-3">
+    <div class="container-fluid px-4">    
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+            <form class="d-flex" role="search">
+
+                <input class="form-control me-2"
+                    type="search"
+                    id="locationId"
+                    placeholder="Search bus locations..."
+                    aria-label="Search">
+
+                <button class="btn btn-info text-white fw-semibold"onclick="searchLocations()"
+                    type="button">
+                    Search
+                </button>
+
+            </form>
+           
+        </div>
+          <a href="/addlocation.html" class="btn btn-info text-white fw-semibold" role="button" data-bs-toggle="button" onclick="addLocationbtnOnAction()"> + Add Location</a>
+            
+    </div>
+</nav>
     <div class="py-5 mt-5">
         <div class="container">
             <div class="row g-4" id="locations"></div>
@@ -80,5 +113,6 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
          <script src="/admin.js"></script>
+         <script src="/locations.js"></script>
 </body>
 </html>

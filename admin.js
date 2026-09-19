@@ -69,13 +69,19 @@ busLocation.innerHTML += `
 
         </div>
 
-        <div class="card-footer bg-white border-0 p-4 pt-0">
+         <div class="card-footer bg-white border-0 p-4 pt-0">
 
-            <button class="btn btn-dark w-100 rounded-pill fw-semibold">
-                View Location
-            </button>
+           <button class="btn btn-info text-white fw-semibold" onclick="UpdateVendor(${result[i].vendorId})"
+                    type="button">
+                   Update
+                </button>
+            <button class="btn btn-info text-white fw-semibold " onclick="deletebtnOnAction(${result[i].vendorId})"
+                    type="button" >
+                    Delete
+                </button>
 
         </div>
+
 
     </div>
 
@@ -154,12 +160,12 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetBusVendors", requestOpti
 
         <div class="card-footer bg-white border-0 p-4 pt-0">
 
-           <button class="btn btn-info text-white fw-semibold"
-                    type="button" onclick="updateVendor(${result[i].vendorId})">
+           <button class="btn btn-info text-white fw-semibold" onclick="UpdateVendor(${result[i].vendorId})"
+                    type="button">
                    Update
                 </button>
-            <button class="btn btn-info text-white fw-semibold " onclick="deleteVendor(${result[i].vendorId})"
-                    type="submit" >
+            <button class="btn btn-info text-white fw-semibold " onclick="deletebtnOnAction(${result[i].vendorId})"
+                    type="button" >
                     Delete
                 </button>
 
@@ -279,3 +285,27 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetAllUsers", requestOption
 
     })
     .catch((error) => console.error(error));
+
+
+
+fetch("https://api.freeprojectapi.com/api/BusBooking/GetAvailableRoutes", requestOptions)
+  .then((response) => response.json())
+  .then((result) =>{
+     console.log(result);
+     let routes = document.getElementById("routes");
+     for (let i = 0; i < result.length; i++) {
+     routes.innerHTML += `
+     <tr>
+       <td>${result[i].fromLocationName}</td>
+       <td>${result[i].toLocationName}</td>
+       <td>${result[i].scheduleDate}</td>
+       <td>${result[i].busCount}</td>
+     </tr>`;
+     }
+
+
+
+
+
+   })
+  .catch((error) => console.error(error));

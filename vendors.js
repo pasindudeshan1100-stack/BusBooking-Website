@@ -23,7 +23,7 @@ function searchVendors() {
 
             let vendor = result;
 
-            // API එක array එකක් return කළොත්
+           
             if (Array.isArray(result)) {
 
                 if (result.length === 0) {
@@ -95,9 +95,10 @@ function searchVendors() {
 
                             <button
                                 class="btn btn-info text-white fw-semibold"
-                                type="button">
+                                type="button"
+                                onclick="UpdateVendor(${vendor.vendorId})">
 
-                                View
+                                Update
 
                             </button>
 
@@ -105,7 +106,7 @@ function searchVendors() {
                             <button
                                 class="btn btn-danger fw-semibold"
                                 type="button"
-                                onclick="deleteVendor(${vendor.vendorId})">
+                                onclick="deletebtnOnAction(${vendor.vendorId})">
 
                                 Delete
 
@@ -139,18 +140,49 @@ function searchVendors() {
         });
 }
 
-function updateVendor(vendorId) {
-    window.location.href = `vendorform.html`;
 
-    const vendor
+function UpdateVendor(vendorId) {
+    window.location.href = `vendorform.html?vendorId=${vendorId}`;
+}
+
+ const params = new URLSearchParams(window.location.search);
+
+    const vendorId = params.get("vendorId");
+
+    console.log(vendorId);
+
+    if (vendorId) {
+
+        fetch(`https://api.freeprojectapi.com/api/BusBooking/GetBusVendorsById?id=${vendorId}`)
+            .then(response => response.json())
+            .then(result => {
+
+                console.log(result);
+
+                document.getElementById("vendor_name").value = result.vendorName;
+                document.getElementById("vendor_id").value = result.vendorId;
+                document.getElementById("email").value = result.emailId;
+                document.getElementById("Phone_Number").value = result.contactNo;
+
+            })
+            .catch(error => console.error(error));
+    }
+
+function  updateVendorbtnOnAction() {
+
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
+const VendorName = document.getElementById("vendor_name").value;
+const VendorId = document.getElementById("vendor_id").value;
+const Email = document.getElementById("email").value;
+const Phone_Number = document.getElementById("Phone_Number").value;
+
 const raw = JSON.stringify({
-  "vendorId": 0,
-  "vendorName": "string",
-  "contactNo": "string",
-  "emailId": "string"
+  "vendorId": VendorId,
+  "vendorName": VendorName,
+  "contactNo": Phone_Number,
+  "emailId": Email
 });
 
 const requestOptions = {
@@ -161,7 +193,69 @@ const requestOptions = {
 };
 
 fetch("https://api.freeprojectapi.com/api/BusBooking/PutBusVendors", requestOptions)
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    alert("Vendor updated successfully!");
+
+        window.location.href = "vendors.html";
+
+  })
+  .catch((error) => console.error(error));
+
+
+    }
+
+function addVendorbtnOnAction() {
+const VendorName = document.getElementById("vendor_name").value;
+const Email = document.getElementById("email").value;
+const Phone_Number = document.getElementById("Phone_Number").value;
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "vendorId": 0,
+  "vendorName": VendorName,
+  "contactNo": Phone_Number,
+  "emailId": Email
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://api.freeprojectapi.com/api/BusBooking/PostBusVendor", requestOptions)
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    alert("Vendor added successfully!");
+    window.location.href = "vendors.html";
+
+  })
+  .catch((error) => console.error(error));
+}
+
+
+function deletebtnOnAction(vendorId) {
+const raw = "";
+
+const requestOptions = {
+  method: "DELETE",
+  body: raw,
+  redirect: "follow"
+};
+
+fetch(`https://api.freeprojectapi.com/api/BusBooking/DeleteBusVendor?id=${vendorId}`, requestOptions)
   .then((response) => response.text())
-  .then((result) => console.log(result))
+  .then((result) => {
+    console.log(result);
+
+    alert("Vendor deleted successfully!");
+    window.location.href = "vendors.html";
+})
   .catch((error) => console.error(error));
 }
