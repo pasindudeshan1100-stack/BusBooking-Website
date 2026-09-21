@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EasyRide - Bus Booking</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+</head>
+
+<body class="bg-light">
+
+
+<!-- Booking Section -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h1 class="fw-bold text-primary">
+                Bus Booking
+            </h1>
+
+            <p class="text-muted">
+                Complete your passenger details and reserve your seat.
+            </p>
+
+        </div>
+
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card border-0 shadow-lg rounded-4">
+
+
+                    <div class="card-header bg-primary text-white text-center py-3">
+
+                        <h4 class="mb-0 fw-bold">
+                            Passenger Booking Form
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="card-body p-4 p-md-5">
+
+
+                        <form id="bookingForm">
+
+
+                            <!-- Customer ID -->
+
+                            <div class="mb-4">
+
+                                <label for="custId"
+                                    class="form-label fw-semibold">
+
+                                    Customer ID
+
+                                </label>
+
+                                <input type="number"
+                                    id="custId"
+                                    class="form-control"
+                                    placeholder="Enter customer ID"
+                                    required>
+
+                            </div>
+
+
+
+                            <!-- Schedule ID -->
+
+                            <div class="mb-4">
+
+                                <label for="scheduleId"
+                                    class="form-label fw-semibold">
+
+                                    Schedule ID
+
+                                </label>
+
+                                <input type="number"
+                                    id="scheduleId"
+                                    class="form-control"
+                                    placeholder="Enter schedule ID"
+                                    required>
+
+                            </div>
+
+
+
+                            <!-- Booking Date -->
+
+                            <div class="mb-4">
+
+                                <label for="bookingDate"
+                                    class="form-label fw-semibold">
+
+                                    Booking Date
+
+                                </label>
+
+                                <input type="datetime-local"
+                                    id="bookingDate"
+                                    class="form-control"
+                                    required>
+
+                            </div> 
+
+
+
+                            <hr class="my-4">
+
+
+
+                            <h5 class="fw-bold mb-4 text-primary">
+                                Passenger Details
+                            </h5>
+
+
+
+                            <!-- Passenger Name -->
+
+                            <div class="mb-3">
+
+                                <label for="passengerName"
+                                    class="form-label fw-semibold">
+
+                                    Passenger Name
+
+                                </label>
+
+                                <input type="text"
+                                    id="passengerName"
+                                    class="form-control"
+                                    placeholder="Enter passenger name"
+                                    required>
+
+                            </div>
+
+
+
+                            <div class="row">
+
+
+                                <!-- Age -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="age"
+                                        class="form-label fw-semibold">
+
+                                        Age
+
+                                    </label>
+
+                                    <input type="number"
+                                        id="age"
+                                        class="form-control"
+                                        min="1"
+                                        max="120"
+                                        placeholder="Enter age"
+                                        required>
+
+                                </div>
+
+
+
+                                <!-- Gender -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="gender"
+                                        class="form-label fw-semibold">
+
+                                        Gender
+
+                                    </label>
+
+                                    <select id="gender"
+                                        class="form-select"
+                                        required>
+
+                                        <option value="">
+                                            Select Gender
+                                        </option>
+
+                                        <option value="Male">
+                                            Male
+                                        </option>
+
+                                        <option value="Female">
+                                            Female
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Seat Number -->
+
+                            <div class="mb-4">
+
+                                <label for="seatNo"
+                                    class="form-label fw-semibold">
+
+                                    Seat Number
+
+                                </label>
+
+                                <input type="number"
+                                    id="seatNo"
+                                    class="form-control"
+                                    min="1"
+                                    placeholder="Enter seat number"
+                                    required>
+
+                            </div>
+
+
+
+                            <!-- Submit -->
+
+                            
+                          <div class="row g-3">
+
+    <div class="col-12 col-md-6">
+
+        <button type="submit"
+            class="btn btn-primary btn-lg fw-bold w-100" onclick="confirmbtnOnAction()">
+
+            Confirm
+
+        </button>
+
+    </div>
+
+
+    <div class="col-12 col-md-6">
+
+        <button type="button"
+            class="btn btn-danger btn-lg fw-bold w-100"
+            onclick="deleteBooking()">
+
+            Delete
+
+        </button>
+
+    </div>
+
+</div>
+                            
+                       
+
+                            
+
+                            <!-- Message -->
+
+                            <div id="bookingMessage"
+                                class="mt-4">
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer class="bg-dark text-white text-center py-3">
+
+    <p class="mb-0">
+        © 2026 EasyRide. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script src="/busshedule.js"></script>
+
+</body>
+
+</html>

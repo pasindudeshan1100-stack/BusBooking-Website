@@ -30,7 +30,10 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetBusSchedules", requestOp
               </div>
 
               <span class="badge bg-primary rounded-pill px-3 py-2">
-                BUS
+               
+                  ${result[i].scheduleId}
+                
+            
               </span>
 
             </div>
@@ -93,11 +96,10 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetBusSchedules", requestOp
 
 
             <!-- Book Button -->
-            <button class="btn btn-primary w-100 rounded-3 py-2 fw-bold">
+            <button class="btn btn-primary w-100 rounded-3 py-2 fw-bold" onclick="bookingbtnOnAction( )">
               <i class="bi bi-ticket-perforated-fill me-2"></i>
               Book Now
             </button>
-
           </div>
 
         </div>
@@ -110,3 +112,7 @@ fetch("https://api.freeprojectapi.com/api/BusBooking/GetBusSchedules", requestOp
   })
   .catch((error) => console.error(error));
   
+function bookingbtnOnAction(){
+   window.location.href = "addbusbookingform.html";
+}
+
