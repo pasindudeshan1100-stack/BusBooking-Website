@@ -2,243 +2,303 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EasyRide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-info-subtle shadow-sm">
-  <div class="container-fluid px-4">
+<!-- ================= LOGO NAVBAR ================= -->
 
-    <!-- Responsive Logo -->
-    <a class="navbar-brand" href="/index.html">
-      <img src="images/3632041d-dc7c-483f-9192-61d8eb8220d0.png"
-           alt="EasyRide Logo"
-           class="img-fluid w-100"
-           style="max-width: 200px;">
-    </a>
+<nav class="navbar bg-info-subtle shadow-sm py-2">
+    <div class="container-fluid px-4 px-lg-5">
 
-    <!-- Mobile Menu Button -->
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/index.html">
 
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <img src="images/3632041d-dc7c-483f-9192-61d8eb8220d0.png"
+                 alt="EasyRide Logo"
+                 class="img-fluid"
+                 style="max-width: 200px; height: 50px;">
 
-    <!-- Navigation Links -->
-    <div class="collapse navbar-collapse justify-content-end"
-         id="navbarNav">
-
-      <ul class="navbar-nav align-items-lg-center gap-lg-3">
-
-        <li class="nav-item">
-          <a class="nav-link active text-dark fw-medium fs-5 px-3"
-             href="/index.html">
-            Home
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-medium fs-5 px-3"
-             href="/service.html">
-            Our Services
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-medium fs-5 px-3"
-             href="/booking.html">
-            Bus Schedule
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-medium fs-5 px-3"
-             href="/contact.html">
-            Contact Us
-          </a>
-        </li>
-
-        <li>
-            <a class="btn btn-primary fw-semibold fs-5 px-4"
-                 href="login.html">
-                Login
-            </a>
-        </li>
-
-      </ul>
+        </a>
 
     </div>
-  </div>
 </nav>
 
-     <style>
-                   .carousel,
-    .carousel-item {
-        width: 100%;
-        height: 100vh;
-    }
 
-    .carousel-item img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-                </style>
+<!-- ================= MENU NAVBAR ================= -->
 
+<nav class="navbar navbar-expand-lg bg-dark shadow-sm"
+     data-bs-theme="dark">
 
-                <div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="container-fluid px-4 px-lg-5">
 
-                    <div class="carousel-indicators">
+        <!-- Mobile Button -->
 
-                        <button type="button"
-                            data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="Slide 1">
-                        </button>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-                        <button type="button"
-                            data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2">
-                        </button>
+            <span class="navbar-toggler-icon"></span>
 
-                        <button type="button"
-                            data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide-to="2"
-                            aria-label="Slide 3">
-                        </button>
-
-                    </div>
+        </button>
 
 
-                    <div class="carousel-inner">
+        <!-- Menu -->
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav mx-auto gap-lg-2">
+
+                <li class="nav-item">
+
+                    <a class="nav-link active fw-semibold px-3"
+                       aria-current="page"
+                       href="/index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
 
 
-                        <!-- Slide 1 -->
+                <li class="nav-item">
 
-                        <div class="carousel-item active">
+                    <a class="nav-link fw-semibold px-3"
+                       href="/shedule.html">
 
-                            <img src="https://easyseat.lk/social/easyseat-share-20260623.jpg"
-                                class="d-block w-100"
-                                alt="Bus Travel">
+                        Bus Schedule
 
-                            <div class="carousel-caption d-none d-md-block">
+                    </a>
 
-                                <h5>Your Journey, Our Priority</h5>
-
-                                <p>
-                                    Travel comfortably and safely to your destination.
-                                </p>
-
-                            </div>
-
-                        </div>
+                </li>
 
 
-                        <!-- Slide 2 -->
+                <li class="nav-item">
 
-                        <div class="carousel-item">
+                    <a class="nav-link fw-semibold px-3"
+                       href="/service.html">
 
-                            <img src="https://en.yutong.com/res/res/2024/12/20/richText/b5c2093fe6224db195cf18904ebd1e44.jpg"
-                                class="d-block w-100"
-                                alt="Bus Journey">
+                        Our Services
 
-                            <div class="carousel-caption d-none d-md-block">
+                    </a>
 
-                                <h5>Book Your Journey With Ease</h5>
-
-                                <p>
-                                    Fast, simple and reliable bus booking at your fingertips.
-                                </p>
-
-                            </div>
-
-                        </div>
+                </li>
 
 
-                        <!-- Slide 3 -->
+                <li class="nav-item">
 
-                        <div class="carousel-item">
+                    <a class="nav-link fw-semibold px-3"
+                       href="/contact.html">
 
-                            <img src="https://en.yutong.com/z/challenge20242/images/gallery/australia/9.webp"
-                                class="d-block w-100"
-                                alt="Bus Travel">
+                        Contact Us
 
-                            <div class="carousel-caption d-none d-md-block">
+                    </a>
 
-                                <h5>Every Destination Starts Here</h5>
+                </li>
 
-                                <p>
-                                    Find your route, book your seat, and enjoy the journey.
-                                </p>
-
-                            </div>
-
-                        </div>
+            </ul>
 
 
-                    </div>
+            <!-- Login -->
 
+            <div class="d-flex mt-3 mt-lg-0">
 
-                    <!-- Previous -->
+                <a href="login.html"
+                   class="btn btn-primary fw-bold px-4 py-2 rounded-pill shadow-sm">
 
-                    <button class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
+                    Login
 
-                        <span class="carousel-control-prev-icon"></span>
+                </a>
 
-                    </button>
-
-
-                    <!-- Next -->
-
-                    <button class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-
-                        <span class="carousel-control-next-icon"></span>
-
-                    </button>
-
-
-                </div>
-
-    <footer class="bg-dark text-white py-4">
-
-        <div class="container text-center">
-
-            <h5 class="fw-bold">
-                EasyRide
-            </h5>
-
-            <p class="text-white-50 mb-0">
-                Let's Make Your Journey Easier
-            </p>
-
-            <small class="text-white-50">
-                © 2026 EasyRide. All Rights Reserved.
-            </small>
+            </div>
 
         </div>
 
-    </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/app.js"></script>
+    </div>
+
+</nav>
+
+
+<!-- ================= CAROUSEL ================= -->
+
+<div id="carouselExampleCaptions"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="3000">
+
+
+    <!-- Indicators -->
+
+    <div class="carousel-indicators">
+
+        <button type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1">
+        </button>
+
+        <button type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2">
+        </button>
+
+        <button type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3">
+        </button>
+
+    </div>
+
+
+    <!-- Carousel Images -->
+
+    <div class="carousel-inner">
+
+
+        <!-- Slide 1 -->
+
+        <div class="carousel-item active">
+
+            <img src="https://easyseat.lk/social/easyseat-share-20260623.jpg"
+                 class="d-block w-100 h-100 object-fit-cover"
+                  style="height: calc(100vh - 154px); object-fit: cover;">
+                 
+
+            <div class="carousel-caption d-none d-md-block">
+
+                <div class="bg-dark bg-opacity-50 rounded-4 p-4">
+
+                    <h1 class="fw-bold">
+                        Your Journey, Our Priority
+                    </h1>
+
+                    <p class="fs-5 mb-0">
+                        Travel comfortably and safely to your destination.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Slide 2 -->
+
+        <div class="carousel-item">
+
+            <img src="https://en.yutong.com/res/res/2024/12/20/richText/b5c2093fe6224db195cf18904ebd1e44.jpg"
+                 class="d-block w-100 h-100 object-fit-cover"
+                style="height: calc(100vh - 154px); object-fit: cover;">
+                 
+
+            <div class="carousel-caption d-none d-md-block">
+
+                <div class="bg-dark bg-opacity-50 rounded-4 p-4">
+
+                    <h1 class="fw-bold">
+                        Book Your Journey With Ease
+                    </h1>
+
+                    <p class="fs-5 mb-0">
+                        Fast, simple and reliable bus booking at your fingertips.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Slide 3 -->
+
+        <div class="carousel-item">
+
+            <img src="https://en.yutong.com/z/challenge20242/images/gallery/australia/9.webp"
+                 class="d-block w-100 h-100 object-fit-cover"
+                style="height: calc(100vh - 154px); object-fit: cover;">
+                
+
+            <div class="carousel-caption d-none d-md-block">
+
+                <div class="bg-dark bg-opacity-50 rounded-4 p-4">
+
+                    <h1 class="fw-bold">
+                        Every Destination Starts Here
+                    </h1>
+
+                    <p class="fs-5 mb-0">
+                        Find your route, book your seat, and enjoy the journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Previous -->
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+        <span class="visually-hidden">
+            Previous
+        </span>
+
+    </button>
+
+
+    <!-- Next -->
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+        <span class="visually-hidden">
+            Next
+        </span>
+
+    </button>
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/app.js"></script>
+
 </body>
 
 </html>

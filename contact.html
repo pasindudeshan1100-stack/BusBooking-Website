@@ -25,22 +25,34 @@
 
 <body class="bg-light">
 
-    <!-- ================= NAVBAR ================= -->
+  <!-- ================= LOGO NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg bg-info-subtle shadow-sm">
+<nav class="navbar bg-info-subtle shadow-sm py-2">
+    <div class="container-fluid px-4 px-lg-5">
 
-        <div class="container-fluid px-4">
+        <a class="navbar-brand" href="/index.html">
 
-            <!-- Logo -->
-            <a class="navbar-brand" href="/index.html">
-                <img src="images/3632041d-dc7c-483f-9192-61d8eb8220d0.png"
-                    alt="EasyRide Logo"
-                    class="img-fluid"
-                    style="max-width: 200px;">
-            </a>
+            <img src="images/3632041d-dc7c-483f-9192-61d8eb8220d0.png"
+                 alt="EasyRide Logo"
+                 class="img-fluid"
+                 style="max-width: 200px; height: 50px;">
 
-            <!-- Mobile Menu -->
-            <button class="navbar-toggler"
+        </a>
+
+    </div>
+</nav>
+
+
+<!-- ================= MENU NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-dark shadow-sm"
+     data-bs-theme="dark">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+        <!-- Mobile Button -->
+
+        <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
@@ -48,58 +60,76 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation">
 
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
 
-            </button>
+        </button>
 
-            <!-- Navigation -->
-            <div class="collapse navbar-collapse justify-content-end"
-                id="navbarNav">
 
-                <ul class="navbar-nav align-items-lg-center gap-lg-3">
+        <!-- Menu -->
 
-                    <li class="nav-item">
-                        <a class="nav-link text-dark fw-medium fs-5 px-3"
-                            href="/index.html">
-                            Home
-                        </a>
-                    </li>
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
 
-                    <li class="nav-item">
-                        <a class="nav-link text-dark fw-medium fs-5 px-3"
-                            href="/service.html">
-                            Our Services
-                        </a>
-                    </li>
+            <ul class="navbar-nav mx-auto gap-lg-2">
 
-                    <li class="nav-item">
-                        <a class="nav-link text-dark fw-medium fs-5 px-3"
-                            href="/booking.html">
-                            Bus Schedule
-                        </a>
-                    </li>
+                <li class="nav-item">
 
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fw-semibold fs-5 px-3"
-                            href="/contact.html">
-                            Contact Us
-                        </a>
-                    </li>
+                    <a class="nav-link active fw-semibold px-3"
+                       aria-current="page"
+                       href="/index.html">
 
-                    <li class="nav-item">
-                        <a class="btn btn-primary fw-semibold fs-5 px-4 rounded-pill"
-                            href="login.html">
-                            Login
-                        </a>
-                    </li>
+                        Home
 
-                </ul>
+                    </a>
 
-            </div>
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link fw-semibold px-3"
+                       href="/shedule.html">
+
+                        Bus Schedule
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link fw-semibold px-3"
+                       href="/service.html">
+
+                        Our Services
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link fw-semibold px-3"
+                       href="/contact.html">
+
+                        Contact Us
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+           
 
         </div>
 
-    </nav>
+    </div>
+
+</nav>
 
   <section class="bg-primary text-white py-5">
 
