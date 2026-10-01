@@ -89,8 +89,7 @@ function searchBus() {
 
 function confirmbtnOnAction() {
 
-
-    const form = document.getElementById("bookingForm");
+       const form = document.getElementById("bookingForm");
 
     if (!form.checkValidity()) {
         form.reportValidity();
